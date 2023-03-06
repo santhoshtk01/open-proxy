@@ -1,0 +1,86 @@
+## Open Proxy
+
+### Installation
+To install the **OpenProxy** on your system, Open your terminal and run the following command.
+
+``$ python -m pip install open_proxy``
+
+### Source
+The main source for this project is free proxy servers around the world. I am using https://proxyscrape.com API to
+get free proxies from different locations in the world.
+
+### Using Open Proxy
+```python
+from open_proxy import open_proxy
+
+# Create a new instance of the class OpenProxy
+openProxy = open_proxy.OpenProxy()
+
+# Calling the proxies_random() function to get random proxies
+# from all around the world.
+openProxy.proxies_random()
+
+```
+### Output
+```python
+/usr/bin/python3.8 /home/tksanthosh/Desktop/open_proxy/src/open_proxy/open_proxy.py 
+35.230.42.148:3128
+123.159.127.74:8085
+24.199.82.12:80
+178.33.3.163:8080
+46.47.197.210:3128
+192.248.125.3:80
+103.241.182.97:80
+124.90.14.209:8085
+152.32.202.108:80
+61.158.175.38:9002
+222.139.221.185:9091
+185.105.102.179:80
+47.109.36.177:80
+138.68.60.8:3128
+...
+```
+
+### Methods
+
+```python
+>>> proxies_random() -> None
+```
+By default, this function will filter working proxies from all around the
+world. This uses all protocols such as **http, socks4, socks5** and
+uses all level of anonymity like **transparent, elite** and **anonymous**.
+
+
+```python
+>>> proxies_country(country: str) -> None
+```
+This will filter working proxies from the specified `country`. The 
+country parameter should be the ISO 3166 Alpha 2 country codes [country codes](#https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
+The other parameters are set to all means uses all protocols and anonymity levels.
+
+
+```python
+>>> proxies_protocol(protocol: str) -> None
+```
+This will filter working proxies from the specified `protocol`.
+Supported protocols are **http, socks4, socks5**. The other parameters are set to all.
+
+
+```python
+>>> proxies_anonymity(anonymity_level: str) -> None
+```
+This will filter working proxies from the specified `anonymity_level`.
+The supported anonymity levels are **transparent, elite** and
+**anonymous**. The other parameters are set to all.
+
+
+```python
+>>> proxies_custom(country: str, protocol: str, anonymity_level: str) -> None
+```
+##### NOTE : Sometime using this `proxies_custom` method doesn't give you any result.
+
+
+### WHY open_proxy OVER FREE API ?
+If you use free API most of the proxies are dead so in our
+open_proxy all the proxies are tested using http://ipinfo.io/json before
+showing the result to the users.
