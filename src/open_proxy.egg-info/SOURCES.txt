@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/open_proxy/__init__.py
+src/open_proxy/open_proxy.py
+src/open_proxy.egg-info/PKG-INFO
+src/open_proxy.egg-info/SOURCES.txt
+src/open_proxy.egg-info/dependency_links.txt
+src/open_proxy.egg-info/top_level.txt
+tests/test_open_proxy.py

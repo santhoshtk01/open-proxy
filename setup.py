@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as readme_file:
 
 setuptools.setup(
     name="open_proxy",
-    version="0.0.1",
+    version="0.0.2",
     author="T.K.santhosh",
     author_email="python.santhosh.py@gmail.com",
     description="Get Free working proxies around the world.",
