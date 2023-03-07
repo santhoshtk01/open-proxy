@@ -103,7 +103,7 @@ class OpenProxy:
             def make_request(proxy: str):
                 # Make a request to ensure that the proxy is working.
                 try:
-                    response = requests.get('http://ipinfo.io/json',
+                    response = requests.get('https://api.github.com/events',
                                             proxies={
                                                 'http': proxy,
                                                 'https': proxy
